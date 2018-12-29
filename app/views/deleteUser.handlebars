@@ -1,0 +1,32 @@
+ <link href="../css/delete.css" type="text/css" rel="stylesheet">
+        <table>
+                <tr>
+                  <th>User Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>E mail</th>
+                  <th>Phone</th>
+                  <th></th>
+                </tr>
+               {{#user  }}
+               <form method="POST" action="/user/delete/{{key}}?_method=DELETE">
+                <tr name={{key}}>
+                  <td name='user_name'+{{key}}>{{user_name}}</td>
+                  <td name='first_name'+{{key}}>{{first_name}}</td>
+                  <td name='last_name'+{{key}}>{{last_name}}</td>
+                  <td name='email'+{{key}}>{{email}}</td>
+                  <td name='phone'+{{key}}>{{phone}}</td>
+                  <td><button class="btn">Delete</button></td>
+                </tr>
+                </form>
+               {{/user}}
+              </table>
+              <footer>
+                </div>
+                <div class="napred">
+                <a href="#" class="previous">&laquo; Previous</a>
+                <a href="#" class="next">Next &raquo;</a>
+              </div>
+          </footer>
+              
+</body>

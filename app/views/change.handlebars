@@ -1,0 +1,31 @@
+  <link href="../css/add.css" type="text/css" rel="stylesheet">
+<div class="container">
+              {{#user}}
+                <form method="POST" action="/add/changed">
+                   <label for="fname">ID</label>
+                  <input type="text" id="fname" name="key" placeholder="ID..." value={{id}} >
+                  </br>
+                   <label for="fname">User Name</label>
+                  <input type="text" id="fname" name="user_name" placeholder="User name.." value={{user_name}} >
+                  </br>
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="first_name" placeholder="Your name.." value={{first_name}}>
+                  </br>
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="last_name" placeholder="Your last name.." value={{last_name}}>
+                  </br>
+                  <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="Enter Phone" name="phone" value={{phone}}>
+                  </br>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" value={{email}}>
+                  <input type="submit" value="Change">
+                </form>
+                 {{/user}}
+                <footer>
+              </div>
+              <div class="napred">
+              <a href="/" class="previous">&laquo; Previous</a>
+              <a href="/" class="next">Next &raquo;</a>
+            </div>
+        </footer>

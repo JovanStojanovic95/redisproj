@@ -1,0 +1,29 @@
+ <link href="../css/search.css" type="text/css" rel="stylesheet">
+ <link href="../css/delete.css" type="text/css" rel="stylesheet">
+  <h2>Search user</h2>
+   {{#if error}} <span>{{error}}</span>{{/if}}
+        <form class="example" method="POST" action="/search" >
+            <input type="text" placeholder="Search user.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <table>
+            {{#user}}
+            <form method="POST"  action="/user/change/{{id}}">
+               <tr name={{id}}>
+                  <td name='user_name'>{{user_name}}</td>
+                  <td name='first_name'>{{first_name}}</td>
+                  <td name='last_name'>{{last_name}}</td>
+                  <td name='email'>{{email}}</td>
+                  <td name='phone'>{{phone}}</td>
+                  <td><button class="btn1">Change user</button></td>
+                </tr>
+              </form>
+            {{/user}}
+          </table>
+          <footer>
+            </div>
+            <div class="napred">
+            <a href="#" class="previous">&laquo; Previous</a>
+            <a href="#" class="next">Next &raquo;</a>
+          </div>
+      </footer>
